@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weekly Cover Schedule</title>
+  <style>
+    body { font-family: Arial; margin: 30px; }
+    table { border-collapse: collapse; width: 80%; margin: auto; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Weekly Cover Schedule</h2>
+  <table>
+    <tr>
+      <th>Day</th><th>Period</th><th>Class</th><th>Subject</th><th>Cover Teacher</th>
+    </tr>
+    {% for item in data %}
+    <tr>
+      <td>{{ item.Day }}</td>
+      <td>{{ item.Period }}</td>
+      <td>{{ item.Class }}</td>
+      <td>{{ item.Subject }}</td>
+      <td>{{ item['Cover Teacher'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
